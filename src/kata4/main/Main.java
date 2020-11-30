@@ -16,7 +16,7 @@ public class Main {
         
         mailList = new MailListReader().read(fileName);
         
-        histo = new MailHistogramBuilder().build(mailList);
+        histo = new MailHistogramBuilder().build(mailList); 
         
         /*for(int i = 0; i < mailList.size(); i++){
             System.out.println(mailList.get(i).getDomain());
