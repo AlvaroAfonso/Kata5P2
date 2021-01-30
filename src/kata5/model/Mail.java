@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class Mail {
     
-    String mail;
+    private String mail;
     
     public Mail(String mail){
         this.mail = mail;

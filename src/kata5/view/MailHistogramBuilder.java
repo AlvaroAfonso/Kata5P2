@@ -5,12 +5,14 @@ import kata5.model.Histogram;
 import kata5.model.Mail;
 
 public class MailHistogramBuilder {
-    public Histogram<String> build(List<Mail> mails){
+    public Histogram<String> build(List<String> mails){
         
-        Histogram<String> histo = new Histogram<String>();
+        Histogram<String> histo = new Histogram<>();
         
-        for (Mail mail : mails) {
-            histo.increment(mail.getDomain());
+        for (String mail : mails) {
+            Mail email = new Mail(mail);
+            
+            histo.increment(email.getDomain());
         }
         return histo;
     }
